@@ -34,27 +34,8 @@
 					},
 					"enableStaging": false,
 					"translator": {
-						"type": "TabularTranslator",
-						"mappings": [
-							{
-								"source": {
-									"name": "Account",
-									"type": "String"
-								},
-								"sink": {
-									"path": "Account"
-								}
-							},
-							{
-								"source": {
-									"name": "Overall Score",
-									"type": "Double"
-								},
-								"sink": {
-									"path": "OverallScore"
-								}
-							}
-						]
+						"value": "@pipeline().parameters.Mapping",
+						"type": "Expression"
 					}
 				},
 				"inputs": [
@@ -71,6 +52,12 @@
 				]
 			}
 		],
+		"parameters": {
+			"Mapping": {
+				"type": "object",
+				"defaultValue": "  \"translator\": {             \"type\": \"TabularTranslator\",             \"mappings\": [                 {                     \"source\": {                         \"name\": \"Account\",                         \"type\": \"String\"                     },                     \"sink\": {                         \"path\": \"Account\"                     }                 },                 {                     \"source\": {                         \"name\": \"Overall Score\",                         \"type\": \"Double\"                     },                     \"sink\": {                         \"path\": \"OverallScore\"                     }                 }             ]         }"
+			}
+		},
 		"annotations": []
 	}
 }
