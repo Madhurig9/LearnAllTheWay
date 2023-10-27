@@ -42,7 +42,7 @@
 									"type": "String"
 								},
 								"sink": {
-									"path": "$['Account']"
+									"path": "Account"
 								}
 							},
 							{
@@ -51,7 +51,7 @@
 									"type": "Double"
 								},
 								"sink": {
-									"path": "$['Account\\Overall Score']"
+									"path": "OverallScore"
 								}
 							}
 						]
