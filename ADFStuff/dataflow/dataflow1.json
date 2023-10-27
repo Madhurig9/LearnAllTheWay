@@ -13,7 +13,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "select1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          Account as string,",
@@ -48,7 +52,40 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1"
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 select(mapColumn(",
+				"          Account,",
+				"          activeemployees_UsualValue,",
+				"          appointmentsbooked_next2weeks,",
+				"          appointmentsbooked_next2weeks_PercentDiff,",
+				"          appointmentsserviced_PercentDiff,",
+				"          appointmentsbooked_next2weeks_UsualValue,",
+				"          AvgRating,",
+				"          appointmentsserviced_UsualValue,",
+				"          BusinessRegion,",
+				"          {Account Age (Years)},",
+				"          {Enhancements Age 121-180},",
+				"          {Enhancements Age 121-180_Score},",
+				"          {Enhancements Age 181-365},",
+				"          {Cf.BusinessType},",
+				"          {Esclations(Last 4 Weeks)},",
+				"          {Sum of futureschedules},",
+				"          holidaycentercount,",
+				"          futureschedules_PercentDiff,",
+				"          futureschedules_UsualValue,",
+				"          NPS_Score_F,",
+				"          OpenEnhancements,",
+				"          {#Opptys Live},",
+				"          PendingAddons,",
+				"          Support_Task_UsualValue,",
+				"          Support_Task_Value,",
+				"          {MRR (Converted)},",
+				"          {Latest RunDate},",
+				"          {Cf.JiraEpicStatus},",
+				"          {Overall Score}",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> select1"
 			]
 		}
 	}
