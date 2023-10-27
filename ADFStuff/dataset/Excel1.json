@@ -1,0 +1,139 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "in",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Sept26th_CHI.xlsx",
+				"folderPath": "Input",
+				"container": "devchicontainer"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Account",
+				"type": "String"
+			},
+			{
+				"name": "activeemployees_UsualValue",
+				"type": "String"
+			},
+			{
+				"name": "appointmentsbooked_next2weeks",
+				"type": "String"
+			},
+			{
+				"name": "appointmentsbooked_next2weeks_PercentDiff",
+				"type": "String"
+			},
+			{
+				"name": "appointmentsserviced_PercentDiff",
+				"type": "String"
+			},
+			{
+				"name": "appointmentsbooked_next2weeks_UsualValue",
+				"type": "String"
+			},
+			{
+				"name": "AvgRating",
+				"type": "String"
+			},
+			{
+				"name": "appointmentsserviced_UsualValue",
+				"type": "String"
+			},
+			{
+				"name": "BusinessRegion",
+				"type": "String"
+			},
+			{
+				"name": "Account Age (Years)",
+				"type": "String"
+			},
+			{
+				"name": "Enhancements Age 121-180",
+				"type": "String"
+			},
+			{
+				"name": "Enhancements Age 121-180_Score",
+				"type": "String"
+			},
+			{
+				"name": "Enhancements Age 181-365",
+				"type": "String"
+			},
+			{
+				"name": "Cf.BusinessType",
+				"type": "String"
+			},
+			{
+				"name": "Esclations(Last 4 Weeks)",
+				"type": "String"
+			},
+			{
+				"name": "Sum of futureschedules",
+				"type": "String"
+			},
+			{
+				"name": "holidaycentercount",
+				"type": "String"
+			},
+			{
+				"name": "futureschedules_PercentDiff",
+				"type": "String"
+			},
+			{
+				"name": "futureschedules_UsualValue",
+				"type": "String"
+			},
+			{
+				"name": "NPS_Score_F",
+				"type": "String"
+			},
+			{
+				"name": "OpenEnhancements",
+				"type": "String"
+			},
+			{
+				"name": "#Opptys Live",
+				"type": "String"
+			},
+			{
+				"name": "PendingAddons",
+				"type": "String"
+			},
+			{
+				"name": "Support_Task_UsualValue",
+				"type": "String"
+			},
+			{
+				"name": "Support_Task_Value",
+				"type": "String"
+			},
+			{
+				"name": "MRR (Converted)",
+				"type": "String"
+			},
+			{
+				"name": "Latest RunDate",
+				"type": "String"
+			},
+			{
+				"name": "Cf.JiraEpicStatus",
+				"type": "String"
+			},
+			{
+				"name": "Overall Score",
+				"type": "String"
+			}
+		]
+	}
+}
