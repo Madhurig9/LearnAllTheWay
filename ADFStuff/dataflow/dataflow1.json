@@ -1,0 +1,55 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Excel1",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
+				}
+			],
+			"sinks": [],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          Account as string,",
+				"          activeemployees_UsualValue as string,",
+				"          appointmentsbooked_next2weeks as string,",
+				"          appointmentsbooked_next2weeks_PercentDiff as string,",
+				"          appointmentsserviced_PercentDiff as string,",
+				"          appointmentsbooked_next2weeks_UsualValue as string,",
+				"          AvgRating as string,",
+				"          appointmentsserviced_UsualValue as string,",
+				"          BusinessRegion as string,",
+				"          {Account Age (Years)} as string,",
+				"          {Enhancements Age 121-180} as string,",
+				"          {Enhancements Age 121-180_Score} as string,",
+				"          {Enhancements Age 181-365} as string,",
+				"          {Cf.BusinessType} as string,",
+				"          {Esclations(Last 4 Weeks)} as string,",
+				"          {Sum of futureschedules} as string,",
+				"          holidaycentercount as string,",
+				"          futureschedules_PercentDiff as string,",
+				"          futureschedules_UsualValue as string,",
+				"          NPS_Score_F as string,",
+				"          OpenEnhancements as string,",
+				"          {#Opptys Live} as string,",
+				"          PendingAddons as string,",
+				"          Support_Task_UsualValue as string,",
+				"          Support_Task_Value as string,",
+				"          {MRR (Converted)} as string,",
+				"          {Latest RunDate} as string,",
+				"          {Cf.JiraEpicStatus} as string,",
+				"          {Overall Score} as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1"
+			]
+		}
+	}
+}
