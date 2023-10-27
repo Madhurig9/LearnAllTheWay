@@ -1,63 +1,6 @@
 {
 	"name": "pipeline1",
 	"properties": {
-		"activities": [
-			{
-				"name": "Copy data1",
-				"type": "Copy",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "0.12:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"source": {
-						"type": "ExcelSource",
-						"storeSettings": {
-							"type": "AzureBlobStorageReadSettings",
-							"recursive": false,
-							"enablePartitionDiscovery": false
-						}
-					},
-					"sink": {
-						"type": "JsonSink",
-						"storeSettings": {
-							"type": "AzureBlobStorageWriteSettings"
-						},
-						"formatSettings": {
-							"type": "JsonWriteSettings"
-						}
-					},
-					"enableStaging": false,
-					"translator": {
-						"value": "@pipeline().parameters.Mapping",
-						"type": "Expression"
-					}
-				},
-				"inputs": [
-					{
-						"referenceName": "Excel1",
-						"type": "DatasetReference"
-					}
-				],
-				"outputs": [
-					{
-						"referenceName": "Json1",
-						"type": "DatasetReference"
-					}
-				]
-			}
-		],
-		"parameters": {
-			"Mapping": {
-				"type": "Object",
-				"defaultValue": "  \"translator\": {             \"type\": \"TabularTranslator\",             \"mappings\": [                 {                     \"source\": {                         \"name\": \"Account\",                         \"type\": \"String\"                     },                     \"sink\": {                         \"path\": \"Account\"                     }                 },                 {                     \"source\": {                         \"name\": \"Overall Score\",                         \"type\": \"Double\"                     },                     \"sink\": {                         \"path\": \"OverallScore\"                     }                 }             ]         }"
-			}
-		},
 		"annotations": []
 	}
 }
