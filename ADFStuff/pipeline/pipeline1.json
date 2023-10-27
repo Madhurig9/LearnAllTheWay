@@ -37,8 +37,22 @@
 						"type": "TabularTranslator",
 						"mappings": [
 							{
+								"source": {
+									"name": "Account",
+									"type": "String"
+								},
 								"sink": {
-									"path": "$['Column_1']"
+									"path": "$['Account']"
+								}
+							},
+							{
+								"sink": {
+									"path": "$['Account\\Overall Score']"
+								}
+							},
+							{
+								"sink": {
+									"path": "$['Account\\LatestRun']"
 								}
 							}
 						]
