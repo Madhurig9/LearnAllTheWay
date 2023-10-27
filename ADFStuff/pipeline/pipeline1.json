@@ -37,8 +37,12 @@
 						"type": "TabularTranslator",
 						"mappings": [
 							{
+								"source": {
+									"name": "Account",
+									"type": "String"
+								},
 								"sink": {
-									"path": "$"
+									"path": "Account"
 								}
 							}
 						]
