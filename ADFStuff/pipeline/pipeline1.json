@@ -46,13 +46,12 @@
 								}
 							},
 							{
+								"source": {
+									"name": "Overall Score",
+									"type": "Double"
+								},
 								"sink": {
 									"path": "$['Account\\Overall Score']"
-								}
-							},
-							{
-								"sink": {
-									"path": "$['Account\\LatestRun']"
 								}
 							}
 						]
